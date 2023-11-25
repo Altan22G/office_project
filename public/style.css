@@ -102,10 +102,12 @@ body {
 
   .insurance-details {
     position: relative;
-    padding-bottom: 70px;
-    /* height: 100px; */
+    /* padding-bottom: 70px; */
   }
   
+  .insurance-details p {
+    width: 90%;
+  }
   .insurance-details img {
     max-width: 100%;
     max-height: 100%;
@@ -171,3 +173,29 @@ body {
   .contact-info p {
     margin: 5px 0;
   }
+
+  .gmap_canvas{
+    overflow:hidden;
+    height:400px;
+    width:810px
+  }
+  .gmap_canvas iframe{
+    position:relative;
+    display: flex;
+
+    z-index:2
+  }
+
+  .mapouter{
+    position:relative;
+    height:400px;
+    width:810px;
+    background:#fff;
+    display: flex;
+  } 
+
+  .maprouter a{
+    color:#fff !important;
+    position:absolute !important;
+    top:0 !important;
+    z-index:0 !important;}
