@@ -3,39 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Το Όνομα Σου Ασφαλιστικό Γραφείο</title>
+  <title>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Καλώς ήρθατε στο Ασφαλιστικό Γραφείο</h1>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
   </header>
 
   <nav>
     <ul>
-        <li><a href="#">Αρχική</a></li>
-        <li><a href="#">Υπηρεσίες</a></li>
-        <li><a href="#">Πελάτες</a></li>
-        <li><a href="#">Επικοινωνία</a></li>
+        <li>
+          <a href="#">Αρχική</a>
+          </li>
+        <li>
+          <a href="#">Υπηρεσίες</a>
+        </li>
+        <li>
+          <a href="#">Πελάτες</a>
+        </li>
+        <li>
+          <a href="#">Επικοινωνία</a></li>
       </ul>
   </nav>
 
   <main>
+    <section id="about-us">
+      <h2>Σχετικά με Εμάς</h2>
+      <p>
+        Καλωσορίσατε στο Ασφαλιστικό Γραφείο, το μέρος όπου παρέχουμε προσαρμοσμένες λύσεις
+        ασφάλισης για τις ανάγκες σας. Με πάνω από δέκα χρόνια εμπειρίας, είμαστε εδώ για να
+        σας προσφέρουμε αξιόπιστα προγράμματα ασφαλειών.
+      </p>
+      <p>
+        Επικοινωνήστε μαζί μας σήμερα για να μάθετε περισσότερα και να ανακαλύψετε πώς μπορούμε
+        να καλύψουμε τις ασφαλιστικές σας ανάγκες.
+      </p>
+    </section>
+    <!-- Ενότητα για τους πελάτες -->
     <section>
-      <h2>Πελάτες</h2>
-      <!-- Εδώ μπορείς να προσθέσεις λίστα με τους πελάτες σου -->
+      <h2>Οι Υπηρεσίες Μας</h2>
+      <ul>
+        <li>
+          <div class="insurance-details">
+            <h3>Ασφάλεια Αυτοκινήτου</h3>
+            <strong>Ασφάλεια Αυτοκνήτου</strong> 
+            <br>
+            <strong>Κάλυψη:</strong> Κλοπή, Ζημιές, Ευθύνη </strong>
+            <p>
+              Η ασφάλεια αυτοκινήτου παρέχει κάλυψη για ζημιές στο όχημα σας,
+              αλλά και για τρίτα οχήματα σε περίπτωση ατυχήματος.
+              Προσφέρουμε ποικιλία προγραμμάτων που προσαρμόζονται στις
+              ανάγκες σας και παρέχουν ησυχία κατά την οδήγηση.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="insurance-details">
+            <strong>Είδος:</strong> Σπίτι
+            <br>
+            <strong>Κάλυψη:</strong> Φωτιά, Κλοπή, Βλάβες
+            <br>
+            <strong>Περίοδος:</strong> 01/01/2023 - 01/01/2025
+            <!-- <img src="assets/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg" alt="Ασφάλεια Σπιτιού"> -->
+          </div>
+        </li>
+        <li>
+          <div class="insurance-details">
+            <strong>Είδος:</strong> Υγεία
+            <br>
+            <strong>Κάλυψη:</strong> Ιατρικά Έξοδα, Επείγουσα Φροντίδα
+            <br>
+            <strong>Περίοδος:</strong> 01/01/2023 - 01/01/2023
+          </div>
+        </li>
+        <li>
+          <div class="insurance-details">
+            <strong>Είδος:</strong> Ζωή
+            <br>
+            <strong>Κάλυψη:</strong> Αποθάνατος, Αναπηρία
+            <br>
+            <strong>Περίοδος:</strong> 01/01/2023 - 01/01/2030
+          </div>
+        </li>
+      </ul>
     </section>
 
+    <!-- Ενότητα για τη φόρμα επικοινωνίας -->
     <section>
       <h2>Φόρμα Επικοινωνίας</h2>
-      <!-- Εδώ μπορείς να προσθέσεις μια φόρμα επικοινωνίας για νέους πελάτες -->
+      <p>Συμπληρώστε τη φόρμα παρακάτω για να επικοινωνήσετε μαζί μας:</p>
+      <form>
+        <label for="name">Όνομα:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Μήνυμα:</label>
+        <textarea id="message" name="message" rows="4" required ></textarea>
+
+        <button type="submit">Αποστολή</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2023 Το Όνομα Σου Ασφαλιστικό Γραφείο. Όλα τα δικαιώματα κατοχυρωμένα.</p>
-  </footer>
+    <div class="contact-info">
+      <p>Επικοινωνήστε μαζί μας:</p>
+      <p>Email: info@yourinsurancecompany.com</p>
+      <p>Τηλέφωνο: +30 123 456 7890</p>
+      <p>Διεύθυνση: Παράδεισος 123, Πόλη, ΤΚ 12345</p>
+    </div>
+  </footer> 
 
   <script src="main.js"></script>
 </body>

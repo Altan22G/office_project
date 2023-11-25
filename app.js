@@ -19,3 +19,21 @@ app.use((req, res, next) => {
 app.listen(port, () => {
   console.log(`Ο Server τρέχει στο http://localhost:${port}`);
 });
+
+// Αποθήκευση δεδομένων πελατών σε έναν απλό πίνακα (mock database)
+const customers = [];
+
+// Ρούτα για ανάκτηση όλων των πελατών
+app.get('/customers', (req, res) => {
+  res.json(customers);
+});
+
+// Ρούτα για προσθήκη νέου πελάτη
+app.post('/customers', express.json(), (req, res) => {
+  const newCustomer = req.body;
+  customers.push(newCustomer);
+  res.status(201).json(newCustomer);
+});
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
