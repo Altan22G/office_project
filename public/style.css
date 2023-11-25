@@ -1,0 +1,69 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Ανοικτό ασπρό */
+    color: #333; /* Σκούρο γκρι */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #3498db; /* Μπλε */
+    color: #fff; /* Λευκό */
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav {
+    background-color: #2980b9; /* Σκούρο μπλε */
+    color: #fff; /* Λευκό */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff; /* Λευκό */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  section {
+    margin-top: 20px;
+  }
+  
+  footer {
+    background-color: #3498db; /* Μπλε */
+    color: #fff; /* Λευκό */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
