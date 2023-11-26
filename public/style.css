@@ -77,17 +77,25 @@ body {
 
   #about-us {
     background-color: #3498db; /* Μπλε */
-    color: #fff; /* Λευκό */
-    padding: 40px;
+    color: #000000;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    background-image: url('assets/scott-graham-5fNmWej4tAA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+  }
+
+  .about-us .content {
+    padding: 50px;
   }
   
   #about-us h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: white;
+    color: #000;
   }
   
   #about-us p {
@@ -157,7 +165,7 @@ body {
   footer {
     background-color: #34495e; /* Μπλε-Γκρι */
     color: #fff; /* Λευκό */
-    text-align: center;
+    text-align: left;
     padding: 10px;
     /* position: fixed; */
     bottom: 0;
@@ -165,6 +173,9 @@ body {
     width: auto ;
   }
   
+  footer p {
+    text-align: center;
+  }
   /* Στυλ για τα στοιχεία επικοινωνίας */
   .contact-info {
     margin-top: 10px;
@@ -172,6 +183,19 @@ body {
   
   .contact-info p {
     margin: 5px 0;
+    display: inline-block;
+  }
+
+  .contact-info div img {
+    display: inline-block;
+    max-width: 20px;
+    position: relative;
+    top: 4px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px
   }
 
   .gmap_canvas{
