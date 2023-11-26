@@ -52,13 +52,13 @@ body {
   }  
 
   /* nav li:nth-child(2):hover::after{ */
-      /* content: "Το κείμενό σας εδώ";       */
-      /* color: #000;     */
-      /* display: block; */
-      /* position: absolute; */
-      /* top: 100%; */
-      /* left: 0; */
-      /* background-color: #f9f9f9; */
+      /* content: "Το κείμενό σας εδώ";    
+      /* color: #000;    
+      /* display: block; 
+      /* position: absolute; 
+      /* top: 100%; 
+      /* left: 0; 
+      /* background-color: #f9f9f9; 
       /* padding: 10px; */
       /* width: 100%; */
       /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
@@ -140,7 +140,7 @@ body {
   #about-us h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #000;
+    color: #fff;
   }
   
   #about-us p {
@@ -262,7 +262,7 @@ body {
   .gmap_canvas iframe{
     position:relative;
     display: flex;
-    z-index:2
+    z-index:2;
   }
 
   .mapouter{
@@ -271,6 +271,9 @@ body {
     width:810px;
     background:#fff;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   } 
 
   .maprouter a{
@@ -278,4 +281,62 @@ body {
     position:absolute !important;
     top:0 !important;
     z-index:0 !important;
+  }
+
+  @media only screen and (min-width: 1024px) {
+
+    main {
+      max-width: 850px;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    .insurance-details p {
+      width: 70%;
+    }
+  }
+
+  /* Tablets έχουν συνήθως οθόνη περίπου 768px πλάτος και πάνω */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    main {
+      max-width: 768px;
+    }
+
+    .insurance-details p {
+      width: 80%;
+    }
+  }
+
+  /* Κινητά έχουν συνήθως οθόνη περίπου 480px πλάτος και πάνω */
+  @media only screen and (max-width: 700px) {
+    nav {
+      /* padding: 1.6%; */
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    header {
+      height: auto;
+      padding: 2%;
+    }
+
+    main {
+      max-width: 100%;
+    }
+
+    .insurance-details p {
+      width: 100%;
+    }
+
+    footer p {
+      max-width: 100%;
+    }
+
+    .mapouter, .gmap_canvas iframe {
+      display: none;
+    }
   }
