@@ -38,10 +38,56 @@ body {
   }
   
   nav li {
-    display: inline;
+    display: inline-block;
     margin-right: 15px;
+    position: relative;
+  }
+
+  nav li p {
+    display: none; /* Αρχικά κρύψτε τις παραγράφους */
   }
   
+  nav li:hover p {
+    display: block; /* Εμφανίστε τις παραγράφους όταν το li είναι σε κατάσταση hover */
+  }  
+
+  /* nav li:nth-child(2):hover::after{ */
+      /* content: "Το κείμενό σας εδώ";       */
+      /* color: #000;     */
+      /* display: block; */
+      /* position: absolute; */
+      /* top: 100%; */
+      /* left: 0; */
+      /* background-color: #f9f9f9; */
+      /* padding: 10px; */
+      /* width: 100%; */
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+      /* z-index: 1;     */
+  /* } */
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .nav-item:hover .dropdown-content {
+    display: block;
+  }  
+
+  .dropdown-content p {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content p:hover {
+    background-color: #ddd;
+  }  
+    
   nav a {
     text-decoration: none;
     color: #fff; /* Λευκό */
@@ -77,15 +123,14 @@ body {
 
   #about-us {
     background-color: #3498db; /* Μπλε */
-    color: #000000;
+    color: #fff;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 50px;
-    background-image: url('assets/scott-graham-5fNmWej4tAA-unsplash.jpg');
+    /* background-image: url('assets/scott-graham-5fNmWej4tAA-unsplash.jpg'); */
     background-size: cover;
     background-position: center;
-    opacity: 0.7;
   }
 
   .about-us .content {
@@ -126,7 +171,7 @@ body {
     top: 0;
     left: 0;
     z-index: 0; /* Τοποθετούμε τη φωτογραφία κάτω από το κείμενο */
-    opacity: 0.7;
+    opacity: 1;
   }
   
   form {
@@ -174,14 +219,24 @@ body {
   }
   
   footer p {
-    text-align: center;
+    text-align: right;
+    margin: 10px 0 0 0;
   }
+
+  footer div :first-child {
+    margin-top: 20px;
+  }
+
+  footer div p :last-child {
+    margin: 0;
+  }
+
   /* Στυλ για τα στοιχεία επικοινωνίας */
   .contact-info {
     margin-top: 10px;
   }
   
-  .contact-info p {
+  .contact-info div p {
     margin: 5px 0;
     display: inline-block;
   }
@@ -191,6 +246,7 @@ body {
     max-width: 20px;
     position: relative;
     top: 4px;
+    margin: 0;
   }
 
   .social-icons a {
@@ -206,7 +262,6 @@ body {
   .gmap_canvas iframe{
     position:relative;
     display: flex;
-
     z-index:2
   }
 
@@ -222,4 +277,5 @@ body {
     color:#fff !important;
     position:absolute !important;
     top:0 !important;
-    z-index:0 !important;}
+    z-index:0 !important;
+  }
