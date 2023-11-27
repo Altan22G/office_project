@@ -17,3 +17,14 @@ setTimeout(function() {
   document.getElementById('content').style.display = 'block';
   document.getElementById('loader').style.display = 'none';
 }, 2000); // Προσαρμόστε το χρονικό διάστημα ανάλογα με τις ανάγκες σας
+
+function sendMail() {
+  var params = {
+    from_name : document.getElementById('name').value,
+    email_id : document.getElementById('email').value,
+    message : document.getElementById('message').value
+  }
+  emailjs.send("service_q934shc", "template_m0pa6vi", params).then(function (res) {
+    alert("Succes" + res.status);
+  })
+}
