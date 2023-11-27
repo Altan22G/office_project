@@ -6,8 +6,9 @@ body {
     padding: 0;
     background-color: #f0f0f0; /* Ανοικτό ασπρό */
     color: #333; /* Σκούρο γκρι */
+    transition: background-color 0.5s ease; /* Προσθήκη μεταβάσεων για το χρώμα του φόντου */
   }
-  
+    
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -43,34 +44,53 @@ body {
     position: relative;
   }
 
-  nav li p {
-    display: none; /* Αρχικά κρύψτε τις παραγράφους */
+  a.a_b {
+    padding: 16px 5px;
+  }
+
+  nav li a:hover {
+    background-color: #4291c5;
   }
   
   nav li:hover p {
     display: block; /* Εμφανίστε τις παραγράφους όταν το li είναι σε κατάσταση hover */
-  }  
-
-  /* nav li:nth-child(2):hover::after{ */
-      /* content: "Το κείμενό σας εδώ";    
-      /* color: #000;    
-      /* display: block; 
-      /* position: absolute; 
-      /* top: 100%; 
-      /* left: 0; 
-      /* background-color: #f9f9f9; 
-      /* padding: 10px; */
-      /* width: 100%; */
-      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-      /* z-index: 1;     */
-  /* } */
+  }
 
   .dropdown-content {
     display: none;
+    width: 220px;
     position: absolute;
+    top: 30px;
+    right: -60px;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  nav li:hover .dropdown-content {
+      display: block;
+      width: 220px;
+      position: absolute;
+      top: 25px;
+      right: -65px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+      transition: display 0.3s ease;
+  }
+
+  a.d_content {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px 10px;
+  }
+
+  a.d_content:hover {
+    background-color: #ccc;
   }
 
   .nav-item:hover .dropdown-content {
@@ -257,7 +277,7 @@ body {
   .gmap_canvas{
     overflow:hidden;
     height:400px;
-    width:810px
+    width: 850px;
   }
   .gmap_canvas iframe{
     position:relative;
@@ -268,7 +288,7 @@ body {
   .mapouter{
     position:relative;
     height:400px;
-    width:810px;
+    width: 810px;
     background:#fff;
     display: flex;
     flex-direction: row;
