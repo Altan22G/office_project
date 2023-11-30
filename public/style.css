@@ -43,9 +43,8 @@ body {
     margin-right: 15px;
     position: relative;
   }
-
   a.a_b {
-    padding: 16px 5px;
+    padding: 25% 3%;
   }
 
   nav li a:hover {
@@ -168,14 +167,30 @@ body {
     line-height: 1.6;
     color: white;
   }
+
+  h3 {
+    margin: 0;
+  }
   
   h1 {
     margin: 0;
   }
 
+  hr {
+    position: relative;
+    right: 35px;
+    width: 95%;
+    margin: 40px auto;
+    border-style: solid;
+  }
+
   .insurance-details {
     position: relative;
-    /* padding-bottom: 70px; */
+    padding: 20px 0 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
   }
   
   .insurance-details p {

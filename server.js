@@ -27,9 +27,10 @@ app.post('/submitForm', (req, res) => {
   const formData = req.body;
   console.log(formData);
 
+let from_mail = document.getElementById('email')
   // Στέλνουμε το email
   const mailOptions = {
-    from: 'petraltan2008@gmail.com',
+    from: from_mail,
     to: 'petraltan2008@example.com', // Το email του παραλήπτη
     subject: 'Νέο μήνυμα επικοινωνίας',
     text: `Όνομα: ${formData.name}\nEmail: ${formData.email}\nΜήνυμα: ${formData.message}`
