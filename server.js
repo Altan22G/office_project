@@ -42,11 +42,11 @@ app.post('/submitInsuranceForm', (req, res) => {
 
 app.post('/submitContactForm', (req, res) => {
   const formData = req.body;
+  const email = formData.email;
   console.log(formData);
 });
 
 // Στέλνουμε το email
-let email = document.getElementById('email');
 const mailOptions = {
   from: email, // Το email από το οποίο θα στέλνετε τα email
   to: 'petraltan2008@example.com', // Το email του παραλήπτη
