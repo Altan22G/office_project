@@ -27,25 +27,42 @@ app.post('/submitForm', (req, res) => {
   const formData = req.body;
   console.log(formData);
 
-let from_mail = document.getElementById('email')
-  // Στέλνουμε το email
-  const mailOptions = {
-    from: from_mail,
-    to: 'petraltan2008@example.com', // Το email του παραλήπτη
-    subject: 'Νέο μήνυμα επικοινωνίας',
-    text: `Όνομα: ${formData.name}\nEmail: ${formData.email}\nΜήνυμα: ${formData.message}`
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-      res.send('Υπήρξε ένα πρόβλημα κατά την αποστολή του μηνύματος.');
-    } else {
-      console.log('Email sent: ' + info.response);
-      res.send('Το μήνυμά σας στάλθηκε με επιτυχία.');
-    }
-  });
+  res.sendFile(path.join(__dirname, 'src', 'views', 'car.html'));
 });
+
+app.get('/car', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src', 'views', 'car.html'));
+});
+
+app.post('/submitInsuranceForm', (req, res) => {
+  const formData = req.body;
+  console.log(formData);
+  res.send('Τα δεδομένα σας έχουν ληφθεί με επιτυχία!');
+});
+
+app.post('/submitContactForm', (req, res) => {
+  const formData = req.body;
+  console.log(formData);
+});
+
+// Στέλνουμε το email
+let email = document.getElementById('email');
+const mailOptions = {
+  from: email, // Το email από το οποίο θα στέλνετε τα email
+  to: 'petraltan2008@example.com', // Το email του παραλήπτη
+  subject: 'Νέο μήνυμα επικοινωνίας',
+  text: `Όνομα: ${formData.name}\nEmail: ${formData.email}\nΜήνυμα: ${formData.message}`
+};
+
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+  console.error(error);
+  res.send('Υπήρξε ένα πρόβλημα κατά την αποστολή του μηνύματος.');
+    } else {
+  console.log('Email sent: ' + info.response);
+  res.send('Το μήνυμά σας στάλθηκε με επιτυχία.');
+    } 
+  });
 
 app.listen(port, () => {
   console.log(`Ο Server τρέχει στο http://localhost:${port}`);

@@ -1,5 +1,5 @@
 /* styles.css */
-
+/* hover  */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,6 +7,19 @@ body {
     background-color: #f0f0f0; /* Ανοικτό ασπρό */
     color: #333; /* Σκούρο γκρι */
     transition: background-color 0.5s ease; /* Προσθήκη μεταβάσεων για το χρώμα του φόντου */
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .shown {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
   }
     
   .container {
@@ -48,7 +61,7 @@ body {
   }
 
   nav li a:hover {
-    background-color: #4291c5;
+    text-shadow: 4px 4px 4px rgba(182, 182, 182, 0.5);
   }
   
   nav li:hover p {
@@ -68,6 +81,14 @@ body {
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
+  nav ul:nth-child(2):hover::after {
+    content: '\2193'; /* Κώδικας Unicode για το βελάκι προς τα κάτω */
+    display: inline-block;
+    margin-left: 5px; /* Προσαρμόστε το περιθώριο σύμφωνα με τις ανάγκες σας */
+    transition: transform 0.3s ease;
+    transform: rotate(180deg); /* Εφέ μετάβασης για τον περιστροφή */
+  }
+  
   nav li:hover .dropdown-content {
       display: block;
       width: 220px;
@@ -75,17 +96,31 @@ body {
       top: 25px;
       right: -65px;
       background-color: #f9f9f9;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.35);
       border-radius: 5px;
-      transition: display 0.3s ease;
+      transition: transform 0.8s ease;
   }
 
+  nav li:hover .dropdown-content a:nth-child(1) {
+    padding-right: 16px;
+  }
+
+  nav li:hover .dropdown-content a:nth-child(2) {
+    padding-right: 19px;
+  }
+
+  nav li:hover .dropdown-content a:nth-child(3) {
+    padding-right: 49.9px;
+  }
+  nav li:hover .dropdown-content a:nth-child(4) {
+    padding-right: 59px;
+  }
   a.d_content {
     text-decoration: none;
     color: black;
     display: block;
     padding: 5px 10px;
+    display: inline-block;
   }
 
   a.d_content:hover {
@@ -130,6 +165,9 @@ body {
     padding: 20px;
     border-radius: 8px; /* Για γωνίες */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Σκιά */
+    display: grid;
+    place-items: center;
+    align-content: center;
   }
   
   section h2 {
@@ -207,6 +245,11 @@ body {
     left: 0;
     z-index: 0; /* Τοποθετούμε τη φωτογραφία κάτω από το κείμενο */
     opacity: 1;
+  }
+
+  .insurance-details a {
+    text-decoration: underline;
+    color: #161616;
   }
   
   form {

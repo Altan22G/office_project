@@ -18,13 +18,16 @@ setTimeout(function() {
   document.getElementById('loader').style.display = 'none';
 }, 2000); // Προσαρμόστε το χρονικό διάστημα ανάλογα με τις ανάγκες σας
 
-function sendMail() {
-  var params = {
-    from_name : document.getElementById('name').value,
-    email_id : document.getElementById('email').value,
-    message : document.getElementById('message').value
-  }
-  emailjs.send("service_q934shc", "template_m0pa6vi", params).then(function (res) {
-    alert("Succes" + res.status);
-  })
-}
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) =>{
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
