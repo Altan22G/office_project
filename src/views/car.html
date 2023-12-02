@@ -8,27 +8,94 @@
 </head>
 <body>
 
-  <form id="insuranceForm">
-    <label for="name">Όνομα:</label>
-    <input type="text" id="name" name="name" required>
+  <header>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
+  </header>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <nav>
+    <ul>
+        <li>
+          <a href="#" class="a_b">Αρχική</a>
+        </li>
+        <li>
+          <a href="#" class="a_b">Υπηρεσίες</a>   
+          <div class="dropdown-content">
+            <a href="/car" class="d_content">Ασφάλεια Οχήματος</a>
+            <a href="" class="d_content">Ασφάλεια Κατοικίας</a>
+            <a href="" class="d_content">Ασφάλεια Υγείας</a>
+            <a href="" class="d_content">Ασφάλεια Ζωής</a>
+          </div>       
+        </li>
+        <li>
+          <a href="#" class="a_b">Πελάτες</a>
+        </li>
+        <li>
+          <a href="#" class="a_b">Επικοινωνία</a></li>
+      </ul>
+  </nav>
+  <h2>Ασφάλιση Αυτοκινήτου</h2>
+  <main>
+    <section>
+      <form id="insuranceForm">
+        <div>
+          <div>
+            <label for="name">Επώνυμο:</label>
+            <!-- <br> -->
+            <input type="text" id="name" name="name" placeholder="ΑΛΤΑΝΗΣ" required>
+          </div>
+          <div>
+            <label for="name">Όνομα:</label>
+            <!-- <br> -->
+            <input type="text" id="bname" name="bname" placeholder="ΘΕΟΔΩΡΟΣ" required>
+          </div>
+      </div>
 
-    <label for="carModel">Μοντέλο Αυτοκινήτου:</label>
-    <input type="text" id="carModel" name="carModel" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="yourmail@mail.com" required>
 
-    <label for="carYear">Έτος Κατασκευής Αυτοκινήτου:</label>
-    <input type="number" id="carYear" name="carYear" required>
+        <div style="margin-bottom: 15px;">
+          <button type="button">Ιδιώτης</button>
+          <button type="button">Εταιρία</button>
+        </div>
+        <div>
+          <div>
+            <label for="carModel">Μάρκα Αυτοκινήτου:</label>
+            <input type="text" id="carMarka" name="carModel" placeholder="MERCEDES" required>
+          </div>
+          <div>
+            <label for="carModel">Μοντέλο Αυτοκινήτου:</label>
+            <input type="text" id="carModel" name="carModel" placeholder="A118" required>
+          </div>
+        </div>
 
-    <label for="coverageType">Τύπος Κάλυψης:</label>
-    <select id="coverageType" name="coverageType" required>
-      <option value="basic">Βασική Κάλυψη</option>
-      <option value="comprehensive">Ολοκληρωμένη Κάλυψη</option>
-    </select>
+        <div>
+          <div>
+            <label for="carYear">Έτος Κατασκευής Αυτοκινήτου:</label>
+            <input type="number" id="carYear" name="carYear" placeholder="2008" required>
+          </div>
+          <div>
+            <label for="carYear">Αριθμός Κυκλοφορίας:</label>
+            <input type="text" id="carYear" name="carYear" placeholder="HAN 5248" required>
+          </div>
+        </div>
+        <!-- <div>
+          <span>Το όχημα είναι καινούριο;</span>
+          <Label>NAI</Label>
+          <input type="radio" name="YES" id="yes" value="NAI" class="radio" style="display: inline-block;">
+          <Label>OXI</Label>
+          <input type="radio" name="NO" id="no" value="OXI" class="radio">
+        </div> -->
 
-    <button type="submit">Υποβολή</button>
-  </form>
+        <label for="coverageType">Τύπος Κάλυψης:</label>
+        <select id="coverageType" name="coverageType" required>
+          <option value="basic">Βασική Κάλυψη</option>
+          <option value="comprehensive">Ολοκληρωμένη Κάλυψη</option>
+        </select>
+
+        <button type="submit">Υποβολή</button>
+    </form></section>
+  </main>
+  
 
 </body>
 </html>
