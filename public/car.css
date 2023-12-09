@@ -61,8 +61,8 @@ body {
     font-size: 20px;
   } 
 
-  button[type=button].active {
-    background-color: #3498db;
+  button[type=button].selected {
+    background-color: #3498db; 
     color: #fff;
     padding: 10px;
     border: solid #3498db;
