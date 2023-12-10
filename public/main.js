@@ -12,3 +12,8 @@ const observer = new IntersectionObserver((entries) =>{
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+document.getElementById('a_b').addEventListener('click', function (event) {
+  event.preventDefault();
+  window.location.href = "/";
+});

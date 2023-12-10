@@ -62,10 +62,11 @@
       </div>
 
       <div>
-        <label for="">Χώρα Έκδοσης Άδεια Οδηγήσεως  </label>
+        <label for="">Χώρα Έκδοσης Άδεια Οδηγήσεως:</label>
       </div>
         <label for="tel">Τηλέφωνο:</label>
-        <input type="tel" name="tel" id="tel">
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000">
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="yourmail@mail.com" required>
 
@@ -75,23 +76,32 @@
         </div>
         <div>
           <div>
+            <label for="carYear">Αριθμός Κυκλοφορίας:</label>
+            <input type="text" id="carYear" name="carYear" placeholder="HAN 5248" required>
+          </div>
+          <div>
+            <label for="use">Χρήση:</label>
+            <input type="text" id="use" name="use" placeholder="IX" required>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="">Έτος Πρώτης Αδείας:</label>
+            <input type="date" name="adeia_date" id="adeia_date" required>
+          </div>
+          <div>
             <label for="carModel">Μάρκα Αυτοκινήτου:</label>
             <input type="text" id="carMarka" name="carModel" placeholder="MERCEDES" required>
           </div>
-          <div>
-            <label for="carModel">Μοντέλο Αυτοκινήτου:</label>
-            <input type="text" id="carModel" name="carModel" placeholder="A118" required>
-          </div>
         </div>
-
         <div>
           <div>
             <label for="carYear">Έτος Κατασκευής Αυτοκινήτου:</label>
             <input type="number" id="carYear" name="carYear" placeholder="2008" required>
           </div>
           <div>
-            <label for="carYear">Αριθμός Κυκλοφορίας:</label>
-            <input type="text" id="carYear" name="carYear" placeholder="HAN 5248" required>
+            <label for="carModel">Μοντέλο Αυτοκινήτου:</label>
+            <input type="text" id="carModel" name="carModel" placeholder="A118" required>
           </div>
         </div>
         <!-- <div>
@@ -101,7 +111,6 @@
           <Label>OXI</Label>
           <input type="radio" name="NO" id="no" value="OXI" class="radio">
         </div> -->
-
         <label for="coverageType">Τύπος Κάλυψης:</label>
         <select id="coverageType" name="coverageType" required>
           <option value="basic">Βασική Κάλυψη</option>
