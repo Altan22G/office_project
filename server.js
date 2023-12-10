@@ -36,6 +36,10 @@ app.get('/car', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'car.html'));
 });
 
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src', 'views', 'contact.html'));
+});
+
 app.post('/submitInsuranceForm', (req, res) => {
   // Εδώ μπορείτε να χρησιμοποιήσετε το formData
   console.log(formData);
