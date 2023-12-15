@@ -403,6 +403,10 @@ body {
       max-width: 100%;
     }
 
+    .shown {
+      font-size: 16px;
+    }
+
     .insurance-details p {
       width: 100%;
     }

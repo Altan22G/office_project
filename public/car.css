@@ -223,3 +223,50 @@ body {
     font-weight: bold;
     font-size: 20px;
   }
+
+  footer {
+    background-color: #34495e; /* Μπλε-Γκρι */
+    color: #fff; /* Λευκό */
+    text-align: left;
+    padding: 10px;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: auto ;
+  }
+  
+  footer p {
+    text-align: right;
+    margin: 10px 0 0 0;
+  }
+
+  footer div :first-child {
+    margin-top: 20px;
+  }
+
+  footer div p :last-child {
+    margin: 0;
+  }
+
+  /* Στυλ για τα στοιχεία επικοινωνίας */
+  .contact-info {
+    margin-top: 10px;
+  }
+  
+  .contact-info div p {
+    margin: 5px 0;
+    display: inline-block;
+  }
+
+  .contact-info div img {
+    display: inline-block;
+    max-width: 20px;
+    position: relative;
+    top: 4px;
+    margin: 0;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px
+  }
