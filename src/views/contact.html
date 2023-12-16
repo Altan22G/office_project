@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="contact.css">
-  <title>Contact Form</title>
+  <link rel="stylesheet" href="mains.css">
+  <title>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</title>
 </head>
 <body>
+  <header>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
+  </header>
   <nav>
     <ul>
         <li>
@@ -30,7 +34,34 @@
   </nav>
 
   <main>
-    <section class="shown">
+    <section>
+      <h2 style="text-align: center;">Στοιχεία Επικοινωνίας</h2>
+      <div class="contact-info-s">
+        <div>
+          <p>Επικοινωνήστε μαζί μας:</p>
+        </div>
+        <div>
+          <img src="assets/mail.png" alt="mail">
+          <p>Email: altanis@otenet.gr</p>
+        </div>
+        <div>
+          <img src="assets/phone-call.png" alt="phone-call">
+          <p>Τηλέφωνο: +30 69 3274 0853</p> 
+        </div>
+        <div>
+          <img src="assets/location.png" alt="location">
+          <p>Διεύθυνση: Παπαφλέσσα 55, Πύργος, ΤΚ 27 100</p>
+        </div>
+      </div>
+      <div class="mapouter" style="width: 400px; display: inline-block;">
+      <div class="gmap_canvas">
+        <iframe src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CF%86%CE%BB%CE%AD%CF%83%CF%83%CE%B1%2055&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
+        </iframe>
+      </div>
+      </div>
+    </section>
+    
+    <section>
       <h2>Φόρμα Επικοινωνίας</h2>
       <p>Συμπληρώστε τη φόρμα παρακάτω για να επικοινωνήσετε μαζί μας:</p>
       <form onsubmit="sendMail()">
@@ -41,36 +72,10 @@
         <input type="email" id="email" name="email" required>
 
         <label for="message">Μήνυμα:</label>
-        <textarea id="message" name="message" rows="4" required ></textarea>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
         <button type="submit">Αποστολή</button>
       </form>
-    </section>
-    <section>
-      <h2>Στοιχεία Επικοινωνίας</h2>
-      <div class="contact-info-s">
-        <div>
-          <p>Επικοινωνήστε μαζί μας:</p>
-        </div>
-        <div>
-          <img src="assets/mail.png" alt="mail">
-          <p>Email: your_email@example.com</p>
-        </div>
-        <div>
-          <img src="assets/phone-call.png" alt="phone-call">
-          <p>Τηλέφωνο: +30 69 XXXXXXXX</p>
-        </div>
-        <div>
-          <img src="assets/location.png" alt="location">
-          <p>Διεύθυνση: Οδός Σας, Πόλη, ΤΚ XXXXX</p>
-        </div>
-      </div>
-      <div class="mapouter" style="width: 400px; display: inline-block; position: relative; left: 60px;">
-      <div class="gmap_canvas">
-        <iframe src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CF%86%CE%BB%CE%AD%CF%83%CF%83%CE%B1%2055&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
-        </iframe>
-      </div>
-    </div>
     </section>
     
   </main>
