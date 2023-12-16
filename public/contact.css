@@ -189,6 +189,7 @@ form {
   
   .contact-info-s div {
     margin: 0;
+    display: inline-block;
   }
   
   .contact-info-s img {
