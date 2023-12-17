@@ -47,10 +47,17 @@ body {
   }
   a.a_b {
     padding: 25% 3%;
+    transition: transform 0.3s ease-out;
+    transform: translateY(0);
   }
 
-  nav li a:hover {
+  nav li a.a_b:hover {
     text-shadow: 4px 4px 4px rgba(182, 182, 182, 0.5);
+    transform: translateY(-5px); /* Αλλάξτε την τιμή ανάλογα με την επιθυμητή μετατόπιση */
+  }
+
+  nav li li:hover {
+    transform: translateY(-140px);
   }
   
   nav li:hover p {
