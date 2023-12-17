@@ -21,6 +21,10 @@ app.get('/car', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'car.html'));
 });
 
+app.get('/home', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src', 'views', 'home.html'));
+});
+
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'contact.html'));
 });
@@ -30,7 +34,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'petraltan2008@gmail.com', // Το email από το οποίο θα στέλνετε τα email
-    pass: '@ltpetr2008' // Ο κωδικός του email από το οποίο θα στέλνετε τα email
+    pass: 'password' // Ο κωδικός του email από το οποίο θα στέλνετε τα email
   }
 });
 

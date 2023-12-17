@@ -20,7 +20,7 @@
           <a href="#" class="a_b">Υπηρεσίες</a>   
           <div class="dropdown-content">
             <a href="/car" class="d_content">Ασφάλεια Οχήματος</a>
-            <a href="" class="d_content">Ασφάλεια Κατοικίας</a>
+            <a href="/home" class="d_content">Ασφάλεια Κατοικίας</a>
             <a href="" class="d_content">Ασφάλεια Υγείας</a>
             <a href="" class="d_content">Ασφάλεια Ζωής</a>
           </div>       
@@ -39,12 +39,10 @@
         <div>
           <div>
             <label for="name">Επώνυμο:</label>
-            <!-- <br> -->
             <input type="text" id="name" name="name" placeholder="ΑΛΤΑΝΗΣ" required>
           </div>
           <div>
             <label for="name">Όνομα:</label>
-            <!-- <br> -->
             <input type="text" id="bname" name="bname" placeholder="ΘΕΟΔΩΡΟΣ" required>
           </div>
       </div>
@@ -311,13 +309,17 @@
         </select>
         </div>
       </div>
-        
+        <div>
+
+        </div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="yourmail@mail.com" required>
 
         <div style="margin-bottom: 15px;">
-          <button type="button">Ιδιώτης</button>
-          <button type="button">Εταιρία</button>
+          <select name="idiotis_etairia" id="">
+            <option value="idiotis">Ιδιώτης</option>
+            <option value="etairia">Εταιρία</option>
+          </select>
         </div>
         <div>
           <div>
