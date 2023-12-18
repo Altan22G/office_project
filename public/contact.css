@@ -13,6 +13,10 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+section:first-child {
+  background-color: #3498db;
+}
+
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -52,21 +56,21 @@ form {
     background-color: #2980b9;
   }
 
-  h2 {
-    color: #3498db; /* Μπλε */
+  section h2 {
+    color: #fff;
   }
   
   .contact-info-s {
-    /* margin-top: 20px; */
+    margin: auto;
     display: inline-block;
     position: relative;
     top: -120px;
-    background-color: #f4f4f4;
     width: 350px;
+    color: #fff;
   }
   
   .contact-info-s div {
-    margin: 0;
+    margin: 10px 0 10px 10px;
     display: inline-block;
   }
   
@@ -75,15 +79,25 @@ form {
     margin-right: 10px;
     display: inline-block;
   }
+
+  .contact-info-s img:last-of-type {
+    max-width: 20px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+  }
   
-  .contact-info-s p {
-    color: #333; /* Σκούρο γκρι */
+  .contact-info-s span {
+    color: #ffffff;
+    position: relative;
+    top: -13px;
+    font-size: 18px;
   }
 
   .gmap_canvas{
     overflow: hidden;
     height: 400px;
     width: 400px;
+    border-radius: 4px;
   }
   .gmap_canvas iframe{
     position: relative;
