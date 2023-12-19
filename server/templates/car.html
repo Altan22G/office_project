@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Φόρμα Ασφάλισης Αυτοκινήτου</title>
+  <link rel="stylesheet"  href="{{url_for('static', filename='./css/car.css')}}">
+</head>
+<body>
+
+  <header>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
+  </header>
+
+  <nav>
+    <ul>
+        <li>
+          <a href="/" class="a_b">Αρχική</a>
+        </li>
+        <li>
+          <a href="#" class="a_b">Υπηρεσίες</a>   
+          <div class="dropdown-content">
+            <a href="/car" class="d_content">Ασφάλεια Οχήματος</a>
+            <a href="" class="d_content">Ασφάλεια Κατοικίας</a>
+            <a href="" class="d_content">Ασφάλεια Υγείας</a>
+            <a href="" class="d_content">Ασφάλεια Ζωής</a>
+          </div>       
+        </li>
+        <li>
+          <a href="#" class="a_b">Πελάτες</a>
+        </li>
+        <li>
+          <a href="/contact" class="a_b">Επικοινωνία</a></li>
+      </ul>
+  </nav>
+  <h2>Ασφάλιση Αυτοκινήτου</h2>
+  <main>
+    <section>
+      <form id="insuranceForm">
+        <div>
+          <div>
+            <label for="name">Επώνυμο:</label>
+            <!-- <br> -->
+            <input type="text" id="name" name="name" placeholder="ΑΛΤΑΝΗΣ" required>
+          </div>
+          <div>
+            <label for="name">Όνομα:</label>
+            <!-- <br> -->
+            <input type="text" id="bname" name="bname" placeholder="ΘΕΟΔΩΡΟΣ" required>
+          </div>
+      </div>
+
+      <div>
+        <div>
+          <label for="birth_date">Ημερομηνια Γέννησης</label>
+          <input type="date" name="birth_date" id="birth_date">
+        </div>
+        <div>
+          <label for="diploma_date">Ημερομηνια Έκδοσης Διπλώματος</label>
+          <input type="date" name="diploma_date" id="diploma_date">
+        </div>
+      </div>
+
+      <div>
+        <label for="">Χώρα Έκδοσης Άδεια Οδηγήσεως  </label>
+      </div>
+        <label for="tel">Τηλέφωνο:</label>
+        <input type="tel" name="tel" id="tel ">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="yourmail@mail.com" required>
+
+        <div style="margin-bottom: 15px;">
+          <button type="button">Ιδιώτης</button>
+          <button type="button">Εταιρία</button>
+        </div>
+        <div>
+          <div>
+            <label for="carModel">Μάρκα Αυτοκινήτου:</label>
+            <input type="text" id="carMarka" name="carModel" placeholder="MERCEDES" required>
+          </div>
+          <div>
+            <label for="carModel">Μοντέλο Αυτοκινήτου:</label>
+            <input type="text" id="carModel" name="carModel" placeholder="A118" required>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="carYear">Έτος Κατασκευής Αυτοκινήτου:</label>
+            <input type="number" id="carYear" name="carYear" placeholder="2008" required>
+          </div>
+          <div>
+            <label for="carYear">Αριθμός Κυκλοφορίας:</label>
+            <input type="text" id="carYear" name="carYear" placeholder="HAN 5248" required>
+          </div>
+        </div>
+        <!-- <div>
+          <span>Το όχημα είναι καινούριο;</span>
+          <Label>NAI</Label>
+          <input type="radio" name="YES" id="yes" value="NAI" class="radio" style="display: inline-block;">
+          <Label>OXI</Label>
+          <input type="radio" name="NO" id="no" value="OXI" class="radio">
+        </div> -->
+
+        <label for="coverageType">Τύπος Κάλυψης:</label>
+        <select id="coverageType" name="coverageType" required>
+          <option value="basic">Βασική Κάλυψη</option>
+          <option value="comprehensive">Ολοκληρωμένη Κάλυψη</option>
+        </select>
+
+        <button type="submit">Υποβολή</button>
+    </form></section>
+  </main>
+  <footer>
+    <div class="contact-info">
+      <div>
+        <p>Επικοινωνήστε μαζί μας:</p>
+      </div>
+      <div>
+        <img src="assets/mail.png" alt="mail">
+        <p>Email: altanis@otenet.gr</p>
+      </div>
+      <div>
+        <img src="assets/phone-call.png" alt="phone-call">
+        <p>Τηλέφωνο: +30 69 75502870</p>
+      </div>
+      <div>
+          <img src="assets/location.png" alt="location">
+          <p>Διεύθυνση: Παπαφλέσσα 55, Πύργος, ΤΚ 27 100</p>
+      </div>
+    </div>
+    <p>
+      &copy; 2023 Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος. Όλα τα δικαιώματα κατοχυρωμένα.
+    <br>
+      Η ιστοσελίδα σχεδιάστηκε και κατασκευάστηκε από τον Αλτάνη Πέτρο
+    </p>
+  </footer>
+</body>
+</html>
