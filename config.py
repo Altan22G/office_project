@@ -11,8 +11,8 @@ class Config:
         ['true', 'on', '1']
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-    FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
+    FLASKY_MAIL_SUBJECT_PREFIX = '[office]'
+    FLASKY_MAIL_SENDER = 'Flasky Admin <nickolasmeny@gmail.com>'
     FLASKY_ADMIN = os.getenv('FLASKY_ADMIN')
     SSL_REDIRECT = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
