@@ -28,7 +28,7 @@ def contact():
         _name = request.form.get('name')
         _email = request.form.get('email')  
         _msg = request.form.get('message')  
-        send_email(sender=_email,msg_body=_msg)
+        send_email(sender="nikolasmeny@gmail.com",msg_body=_msg)
     return render_template('contact.html')
 
 
