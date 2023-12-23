@@ -2,15 +2,15 @@ import os
 from dotenv import load_dotenv
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-load_dotenv()
+load_dotenv(dotenv_path=".env")
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY') or 'hard to guess string'
-    MAIL_SERVER = os.getenv('MAIL_SERVER', 'smtp.googlemail.com')
+    MAIL_SERVER = os.getenv('MAIL_SERVER','smtp.googlemail.com')
     MAIL_PORT = int(os.getenv('MAIL_PORT', '587'))
-    MAIL_USE_TLS = os.getenv('MAIL_USE_TLS', 'true').lower() in \
-        ['true', 'on', '1']
-    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
-    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+    MAIL_USE_TLS = True
+    MAIL_USE_SSL = False
+    MAIL_USERNAME = ''#Βαλε το εμαιλ 
+    MAIL_PASSWORD = ""#Βαλε το app_password απο το 2FA απο το email
     FLASKY_MAIL_SUBJECT_PREFIX = '[office]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <nickolasmeny@gmail.com>'
     FLASKY_ADMIN = os.getenv('FLASKY_ADMIN')
@@ -29,27 +29,16 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
+
 
 
 class TestingConfig(Config):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URL') or \
-        'sqlite://'
     WTF_CSRF_ENABLED = False
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-
-class TestingConfig(Config):
-    TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.getenv("TEST_DATABASE_URL") or \
-        "sqlite://"
-
-
+    DEBUG = False
 
 
 config = {

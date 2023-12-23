@@ -8,9 +8,6 @@ if os.path.exists(dotenv_path):
 from flask import render_template,request
 from . import create_app
 
-
-
-
 from .email import send_email
 
 
@@ -28,12 +25,17 @@ def contact():
         _name = request.form.get('name')
         _email = request.form.get('email')  
         _msg = request.form.get('message')  
-        send_email(sender="nikolasmeny@gmail.com",msg_body=_msg)
+        send_email(title=f'Name: {_name}, Email: {_email}',msg_body=_msg)
     return render_template('contact.html')
 
 
 @app.route('/')
 def home():
+    if request.method == 'POST':
+        _name = request.form.get('name')
+        _email = request.form.get('email')  
+        _msg = request.form.get('message')  
+        send_email(title=f'Name: {_name}, Email: {_email}',msg_body=_msg)
     return render_template('index.html')
 
 @app.route('/car',methods = ['GET','POST'])
