@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD:src/views/contact.html
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="mains.css">
+  <title>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</title>
+=======
+  <link rel="stylesheet" href="{{url_for('static',filename='./css/contact.css')}}">
+  <title>Contact Form</title>
+>>>>>>> backend-work:templates/contact.html
+</head>
+<body>
+  <header>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
+  </header>
+  <nav>
+    <ul>
+        <li>
+          <a href="/" class="a_b">Αρχική</a>
+        </li>
+        <li>
+          <a href="#" class="a_b">Υπηρεσίες</a>   
+          <div class="dropdown-content">
+            <a href="/car" class="d_content">Ασφάλεια Οχήματος</a>
+            <a href="/home" class="d_content">Ασφάλεια Κατοικίας</a>
+            <a href="" class="d_content">Ασφάλεια Υγείας</a>
+            <a href="" class="d_content">Ασφάλεια Ζωής</a>
+          </div>       
+        </li>
+        <li>
+          <a href="#" class="a_b">Πελάτες</a>
+        </li>
+        <li>
+          <a href="/contact" class="a_b">Επικοινωνία</a></li>
+      </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1 style="text-align: center; color: #fff; margin: 25px 0;">Στοιχεία Επικοινωνίας</h1>
+      <div class="contact-info-s">
+        <div>
+          <span>Επικοινωνήστε μαζί μας:</span>
+        </div>
+        <div>
+          <img src="assets/mail.png" alt="mail">
+          <span>Email: altanis@otenet.gr<span>
+        </div>
+        <div>
+          <img src="assets/phone-call.png" alt="phone-call">
+          <span>Τηλέφωνο: +30 69 3274 0853</span> 
+        </div>
+        <div>
+          <img src="assets/location.png" alt="location">
+          <div style="margin: 0; position: relative; top: 0; bottom: 0;">
+            <span style="position: relative; top: 0; bottom: 0;">Διεύθυνση: Παπαφλέσσα 55,</span>
+              <br>
+            <span style="position: relative; top: 0; bottom: 0;"> Πύργος, ΤΚ 27 100</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="mapouter" style="width: 400px; display: inline-block; border-radius: 5px;">
+      <div class="gmap_canvas">
+        <iframe src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CF%86%CE%BB%CE%AD%CF%83%CF%83%CE%B1%2055&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
+        </iframe>
+      </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Φόρμα Επικοινωνίας</h2>
+      <p>Συμπληρώστε τη φόρμα παρακάτω για να επικοινωνήσετε μαζί μας:</p>
+      <form method='POST'>
+        <label for="name">Όνομα:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Μήνυμα:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Αποστολή</button>
+      </form>
+    </section>
+<<<<<<< HEAD:src/views/contact.html
+=======
+    <section>
+      <h2>Στοιχεία Επικοινωνίας</h2>
+      <div class="contact-info-s">
+        <div>
+          <p>Επικοινωνήστε μαζί μας:</p>
+        </div>
+        <div>
+          <img src="{{url_for('static',filename='./assets/mail.png')}}" alt="mail">
+          <p>Email: your_email@example.com</p>
+        </div>
+        <div>
+          <img src="{{url_for('static',filename='./assets/phone-call.png')}}" alt="phone-call">
+          <p>Τηλέφωνο: +30 69 XXXXXXXX</p>
+        </div>
+        <div>
+          <img src="{{url_for('static',filename='./assets/location.png')}}" alt="location">
+          <p>Διεύθυνση: Οδός Σας, Πόλη, ΤΚ XXXXX</p>
+        </div>
+      </div>
+      <div class="mapouter" style="width: 400px; display: inline-block; position: relative; left: 60px;">
+      <div class="gmap_canvas">
+        <iframe src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CF%86%CE%BB%CE%AD%CF%83%CF%83%CE%B1%2055&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
+        </iframe>
+      </div>
+    </div>
+    </section>
+>>>>>>> backend-work:templates/contact.html
+    
+  </main>
+  <footer>
+    <div class="contact-info">
+      <div>
+        <p>Επικοινωνήστε μαζί μας:</p>
+      </div>
+      <div>
+        <img src="{{url_for('static',filename='./assets/mail.png')}}" alt="mail">
+        <p>Email: altanis@otenet.gr</p>
+      </div>
+      <div>
+        <img src="{{url_for('static',filename='./assets/phone-call.png')}}" alt="phone-call">
+        <p>Τηλέφωνο: +30 69 75502870</p>
+      </div>
+      <div>
+          <img src="{{url_for('static',filename='./assets/location.png')}}" alt="location">
+          <p>Διεύθυνση: Παπαφλέσσα 55, Πύργος, ΤΚ 27 100</p>
+      </div>
+    </div>
+    <p>
+      &copy; 2023 Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος. Όλα τα δικαιώματα κατοχυρωμένα.
+    <br>
+      Η ιστοσελίδα σχεδιάστηκε και κατασκευάστηκε από τον Αλτάνη Πέτρο
+    </p>
+  </footer>
+</body>
+</html>

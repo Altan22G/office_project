@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</title>
+<<<<<<< HEAD:public/index.html
+  <link rel="shortcut icon" href="assets/clipboard.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="mains.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+=======
+  <link rel="stylesheet" href="{{url_for('static',filename='./css/style.css')}}">
+  <link rel="shortcut icon" href="assets/clipboard.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="{{url_for('static', filename='./js/main.js')}}"></script>
+>>>>>>> backend-work:templates/index.html
+</head>
+<body>
+  <header>
+    <h1>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</h1>
+  </header>
+
+  <nav>
+    <ul>
+        <li>
+          <a href="/" class="a_b">Αρχική</a>
+        </li>
+        <li>
+          <a href="#" class="a_b">Υπηρεσίες</a>   
+          <div class="dropdown-content">
+            <a href="/car" class="d_content">Ασφάλεια Οχήματος</a>
+            <a href="/home" class="d_content">Ασφάλεια Κατοικίας</a>
+            <a href="" class="d_content">Ασφάλεια Υγείας</a>
+            <a href="" class="d_content">Ασφάλεια Ζωής</a>
+          </div>       
+        </li>
+        <li>
+          <a href="#" class="a_b">Πελάτες</a>
+        </li>
+        <li>
+          <a href="/contact" class="a_b">Επικοινωνία</a></li>
+      </ul>
+  </nav>
+
+  <main>
+    <section id="about-us" class="shown">
+      <h2>Σχετικά με Εμάς</h2>
+      <p>
+        Καλωσορίσατε στο Ασφαλιστικό μας Γραφείο, το μέρος όπου παρέχουμε προσαρμοσμένες λύσεις
+        ασφάλισης για τις ανάγκες σας. Με πάνω από τριάντα χρόνια εμπειρίας, είμαστε εδώ για να
+        σας προσφέρουμε αξιόπιστα προγράμματα ασφαλειών.
+      </p>
+      <p>
+        Επικοινωνήστε μαζί μας σήμερα για να μάθετε περισσότερα και να ανακαλύψετε πώς μπορούμε
+        να καλύψουμε τις ασφαλιστικές σας ανάγκες.
+      </p>
+    </section>
+    <!-- Ενότητα για τους πελάτες -->
+    <section class="shown">
+      <h2>Οι Υπηρεσίες Μας</h2>
+      <ul>
+        <li>
+          <div class="insurance-details" style="background-image: url(assets/luxa.org-opacity-changed-car.png);">
+            <h3>
+              <a href="/car">Ασφάλεια Αυτοκινήτου</a>
+            </h3>
+            <br>
+            <strong>Κάλυψη:</strong> Κλοπή, Ζημιές, Ευθύνη </strong>
+            <p>
+              Η ασφάλεια αυτοκινήτου παρέχει κάλυψη για ζημιές στο όχημα σας,
+              αλλά και για τρίτα οχήματα σε περίπτωση ατυχήματος.
+              Προσφέρουμε ποικιλία προγραμμάτων που προσαρμόζονται στις
+              ανάγκες σας και παρέχουν ησυχία κατά την οδήγηση.
+            </p>
+          </div>
+        </li>
+        <hr>
+        <li>
+          <div class="insurance-details" style="background-image: url(assets/luxa.org-opacity-changed-home.jpg);">
+            <h3>
+              <a href="/home">Ασφάλεια Κατοικίας</a>
+            </h3>
+            <br>
+            <strong>Κάλυψη:</strong> Φωτιά, Κλοπή, Βλάβες
+            <p>Η ασφάλεια του σπιτιού σας είναι πρωταρχική
+              για την προστασία του περιεχομένου και της
+              ειρήνης της οικογένειάς σας. Καλύπτοντας
+              φαινόμενα όπως η φωτιά, η κλοπή, και οι βλάβες,
+              προσφέρουμε εκτεταμένη προστασία για τον τόπο σας.
+              Με μια παραγγελία, εξασφαλίζετε την ηρεμία του νου σας για το μέλλον.
+            </p>
+          </div>
+        </li>
+        <hr>
+        <li>
+          <div class="insurance-details" style="background-image: url(assets/luxa.org-opacity-changed-health.png);">
+            <h3>
+              <a href="">Ασφάλεια Υγείας</a>
+            </h3> 
+            <br>
+            <strong>Κάλυψη:</strong> Ιατρικά Έξοδα, Επείγουσα Φροντίδα
+            <p>Η ασφάλεια υγείας είναι η βάση για μια ζωή χωρίς ανησυχίες. 
+              Καλύπτοντας ιατρικά έξοδα και επείγουσα φροντίδα, 
+              παρέχουμε την απαραίτητη προστασία για την υγεία σας. 
+              Με την ασφάλεια υγείας μας, έχετε την 
+              ασφάλεια ότι η πρόνοιά σας είναι καλυμμένη.
+            </p>
+          </div>
+        </li>
+        <hr>
+        <li>
+          <div class="insurance-details" style="background-image: url(assets/luxa.org-opacity-changed-life.png);">
+            <h3>
+              <a href="">Ασφάλεια Ζωής</a>
+            </h3> 
+            <br>
+            <strong>Κάλυψη:</strong> Αποθάνατος, Αναπηρία
+            <p>Η ασφάλεια ζωής είναι ένας τρόπος να   
+              παρέχετε οικονομική ασφάλεια για τους αγαπημένους σας. 
+              Καλύπτοντας αποζωοποίηση και υποχρεώσεις, 
+              προσφέρουμε ειρήνη στο παρόν και στο μέλλον. 
+              Με την ασφάλεια ζωής μας, διασφαλίζετε ότι η οικογένειά σας 
+              θα είναι προστατευμένη, ακόμα και σε δύσκολες στιγμές.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Ενότητα για τη φόρμα επικοινωνίας -->
+    <section class="shown">
+      <h2>Φόρμα Επικοινωνίας</h2>
+      <p>Συμπληρώστε τη φόρμα παρακάτω για να επικοινωνήσετε μαζί μας:</p>
+      <form method="POST">
+        <label for="name">Όνομα:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Μήνυμα:</label>
+        <textarea id="message" name="message" rows="4" required ></textarea>
+
+        <button type="submit">Αποστολή</button>
+      </form>
+    </section>
+
+    <div class="mapouter" style="margin-top: 85px; width: 100%;">
+      <div class="gmap_canvas">
+        <iframe src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CF%86%CE%BB%CE%AD%CF%83%CF%83%CE%B1%2055&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
+        </iframe>
+      </div>
+  </div>
+  </main>
+  
+  <footer>
+    <div class="contact-info">
+      <div>
+        <p>Επικοινωνήστε μαζί μας:</p>
+      </div>
+      <div>
+        <img src="{{url_for('static',filename='./assets/mail.png')}}" alt="mail">
+        <p>Email: altanis@otenet.gr</p>
+      </div>
+      <div>
+        <img src="{{url_for('static',filename='./assets/phone-call.png')}}" alt="phone-call">
+        <p>Τηλέφωνο: +30 69 75502870</p>
+      </div>
+      <div>
+          <img src="{{url_for('static',filename='./assets/location.png')}}" alt="location">
+          <p>Διεύθυνση: Παπαφλέσσα 55, Πύργος, ΤΚ 27 100</p>
+      </div>
+    </div>
+    <p>
+      &copy; 2023 Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος. Όλα τα δικαιώματα κατοχυρωμένα.
+    <br>
+      Η ιστοσελίδα σχεδιάστηκε και κατασκευάστηκε από τον Αλτάνη Πέτρο
+    </p>
+  </footer>
+</body>
+</html>
