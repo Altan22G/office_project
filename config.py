@@ -9,8 +9,8 @@ class Config:
     MAIL_PORT = int(os.getenv('MAIL_PORT', '587'))
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
-    MAIL_USERNAME = ''#Βαλε το εμαιλ 
-    MAIL_PASSWORD = ""#Βαλε το app_password απο το 2FA απο το email
+    MAIL_USERNAME = 'nickprogrammer2@gmail.com'#Βαλε το εμαιλ 
+    MAIL_PASSWORD = "bunbmvfpvaxkyymj"#Βαλε το app_password απο το 2FA απο το email
     FLASKY_MAIL_SUBJECT_PREFIX = '[office]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <nickolasmeny@gmail.com>'
     FLASKY_ADMIN = os.getenv('FLASKY_ADMIN')
