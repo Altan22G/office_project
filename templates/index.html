@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Ασφαλιστικό Γραφείο Αλτάνης Θεόδωρος</title>
   <link rel="stylesheet" href="{{url_for('static',filename='./css/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='./css/mains.css')}}">
   <link rel="shortcut icon" href="assets/clipboard.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="{{url_for('static', filename='./js/main.js')}}"></script>
@@ -55,7 +56,10 @@
       <h2>Οι Υπηρεσίες Μας</h2>
       <ul>
         <li>
-          <div class="insurance-details" style="background-image: url(assets/luxa.org-opacity-changed-car.png);">
+          <div class="insurance-details" style="background-image: url('{{ url_for('static', filename='./assets/luxa.org-opacity-changed-car.png') }}');">
+            <!-- Your content here -->
+          </div>
+          
             <h3>
               <a href="/car">Ασφάλεια Αυτοκινήτου</a>
             </h3>
