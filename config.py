@@ -5,7 +5,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(dotenv_path=".env")
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY') or 'hard to guess string'
-    MAIL_SERVER = os.getenv('MAIL_SERVER','smtp.googlemail.com')
+    MAIL_SERVER = os.getenv('MAIL_SERVER','smtp.googlemail.com')    
     MAIL_PORT = int(os.getenv('MAIL_PORT', '587'))
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False

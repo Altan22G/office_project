@@ -19,7 +19,6 @@ app = create_app(os.getenv("FLASK_CONFIG") or 'default')
 
 
 @app.route('/contact',methods = ['GET','POST'])
-
 def contact():
     if request.method == 'POST':
         _name = request.form.get('name')
@@ -30,7 +29,7 @@ def contact():
 
 
 @app.route('/')
-def home():
+def index():
     if request.method == 'POST':
         _name = request.form.get('name')
         _email = request.form.get('email')  
@@ -42,4 +41,15 @@ def home():
 def car():
     return render_template('car.html')
 
+@app.route('/health')
+def health():
+    return render_template('health.html')
 
+
+@app.route('/life')
+def life():
+    return render_template('life.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
